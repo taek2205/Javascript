@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>TP Sofiane </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script type="text/javascript">
+  // <!--
+
+  var tab=[4,675,32,87,9837,364,7492,45,345,324,374,8364,5967,12,483,8573,659,365,9573,309];
+  
+  function quiEstLeNombreLePlusGrand(a,b){
+  	return Math.max([a,b]);	
+  }
+
+
+  function aleatoireNombre(a){
+  	var a;
+  	return Math.floor(Math.random()*a);
+  }
+
+
+  function affectation(a,b){
+  	tab[a]=b;
+  }
+
+
+  function jeu(){
+  	var premiernb;
+  	var secondnb;
+  	for (var i=0;i<5;i++)
+  		{
+  			premiernb=aleatoireNombre(tab.length);
+  			secondnb=aleatoireNombre(tab.length);
+  		}
+  		alert("1er nombre : "+premiernb);
+  		alert("2eme nombre : "+secondnb);
+
+  	if (premiernb == secondnb) alert("Perdu");
+    else quiEstLeNombreLePlusGrand(premiernb,secondnb);
+
+    var b;
+    affectation(quiEstLeNombreLePlusGrand(),b*-1);
+
+    var c;
+    if (premiernb > secondnb) affectation(secondnb,c+50);
+    else affectation(premiernb,c+50);
+    
+   var total
+   for(i=0;i=tab.length-1;i++){
+   	total=total+tab[i];
+   }
+
+   if (total >= 0 ) alert("Gagn\u00e9");
+   else alert("Perdu")
+  		
+
+
+
+  }
+
+
+  // -->
+  </script>
+</head>
+<body>
+
+<h1>TP Sofiane </h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="javascript:jeu()">Lancer la fonction</button></p>
+
+</body>
+</html>
